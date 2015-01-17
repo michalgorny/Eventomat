@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Eventomat</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="parse_app_id">AxoLVEF1mgZLbYGRuTa27C7ltJGhEyk5BXENud7p</string>
+    <string name="parse_client_key">kMAcNomD1hyziMlrAO4rKoEPWHVRTTip8oJ1KG05</string>
+
+</resources>
