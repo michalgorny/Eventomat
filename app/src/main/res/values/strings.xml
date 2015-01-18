@@ -14,5 +14,10 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
     <string name="title_activity_event_mode">EventModeActivity</string>
+    <string name="title_activity_event">EventActivity</string>
+    <string name="event_mode_title_section1">News</string>
+    <string name="event_mode_title_section2">Agenda</string>
+    <string name="event_mode_title_section3">Map</string>
+    <string name="event_mode_title_section4">Feedback</string>
 
 </resources>

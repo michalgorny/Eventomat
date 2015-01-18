@@ -1,4 +1,4 @@
-package pl.michalgorny.eventomat;
+package pl.michalgorny.eventomat.ui;
 
 import java.util.Locale;
 
@@ -18,8 +18,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import pl.michalgorny.eventomat.NavigationDrawerFragment;
+import pl.michalgorny.eventomat.R;
 
-public class EventModeActivity extends ActionBarActivity {
+
+public class EventModeActivity extends ActionBarActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -62,9 +65,6 @@ public class EventModeActivity extends ActionBarActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
@@ -73,6 +73,11 @@ public class EventModeActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onNavigationDrawerItemSelected(int position) {
+
     }
 
 

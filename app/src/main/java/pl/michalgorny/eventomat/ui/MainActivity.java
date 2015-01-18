@@ -1,4 +1,4 @@
-package pl.michalgorny.eventomat;
+package pl.michalgorny.eventomat.ui;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -12,22 +12,18 @@ import android.widget.Toast;
 
 import com.squareup.otto.Subscribe;
 
+import pl.michalgorny.eventomat.BusProvider;
+import pl.michalgorny.eventomat.NavigationDrawerFragment;
+import pl.michalgorny.eventomat.R;
+import pl.michalgorny.eventomat.SearchFragment;
 import pl.michalgorny.eventomat.fragments.EventModeFragment;
 import pl.michalgorny.eventomat.fragments.FeedbackFragment;
 
 
-public class MainActivity extends ActionBarActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks  {
+public class MainActivity extends SuperActivity  {
+
 
     private NavigationDrawerFragment mNavigationDrawerFragment;
-
-    private CharSequence mTitle;
-
-    private enum MODE{
-        USER,
-        ORGANIZER;
-    }
-
-    private MODE mMode = MODE.USER;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,18 +38,10 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
 
-        BusProvider.getInstance().register(this);
     }
 
     @Override
-    public void onNavigationDrawerItemSelected(int position) {
-        if (mMode == MODE.USER)
-            handleUserAction(position);
-        else
-            handleAdminAction(position);
-    }
-
-    private void handleUserAction(int number) {
+    public void handleUserAction(int number) {
         Fragment fragment = null;
 
         switch (number) {
@@ -81,15 +69,9 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
                 .commit();
     }
 
-    private void handleAdminAction(int number) {
+    @Override
+    public void handleAdminAction(int number) {
 
-    }
-
-    public void restoreActionBar() {
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
-        actionBar.setDisplayShowTitleEnabled(true);
-        actionBar.setTitle(mTitle);
     }
 
 
@@ -103,21 +85,4 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
         return super.onCreateOptionsMenu(menu);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        if (id == R.id.action_settings) {
-            if (mMode == MODE.USER)
-                mMode = MODE.ORGANIZER;
-            else
-                mMode = MODE.USER;
-
-            Toast.makeText(this, "Mode changed to " + mMode.toString(), Toast.LENGTH_SHORT).show();
-
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }

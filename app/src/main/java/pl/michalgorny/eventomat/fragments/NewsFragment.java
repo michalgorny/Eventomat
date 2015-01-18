@@ -6,9 +6,9 @@ import android.support.v4.app.Fragment;
 /**
  * Created by misa on 2015-01-18.
  */
-public class FeedbackFragment extends Fragment {
+public class NewsFragment extends Fragment {
     public static Fragment newInstance() {
-        FeedbackFragment fragment = new FeedbackFragment();
+        NewsFragment fragment = new NewsFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
