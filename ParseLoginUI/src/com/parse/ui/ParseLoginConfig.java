@@ -347,7 +347,7 @@ public class ParseLoginConfig {
         }
       }
     } else if (keys.contains(FACEBOOK_LOGIN_PERMISSIONS_STRING_ARRAY)) {
-      // For converting from a bundle produced by this class's toBundle()
+      // For converting from a bundle produced by this pojos's toBundle()
       config.setFacebookLoginPermissions(stringArrayToCollection(bundle
           .getStringArray(FACEBOOK_LOGIN_PERMISSIONS_STRING_ARRAY)));
     }

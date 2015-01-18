@@ -34,7 +34,7 @@ import com.parse.ParseUser;
  * Otherwise, it starts the subclass-defined target activity.
  * 
  * To use this, you should subclass this activity and implement
- * {@link ParseLoginDispatchActivity#getTargetClass} to return the class of the
+ * {@link ParseLoginDispatchActivity#getTargetClass} to return the pojos of the
  * target activity that should be launched after login succeeds. If the user
  * cancels the login, your app will go back to whatever activity it was on before
  * your subclass dispatch activity was launched, or exit the app if your subclass

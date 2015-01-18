@@ -13,5 +13,7 @@ public class Eventomat extends Application {
         super.onCreate();
         Parse.initialize(this, "AxoLVEF1mgZLbYGRuTa27C7ltJGhEyk5BXENud7p", "kMAcNomD1hyziMlrAO4rKoEPWHVRTTip8oJ1KG05");
         ParseInstallation.getCurrentInstallation().saveInBackground();
+
+
     }
 }

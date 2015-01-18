@@ -25,4 +25,6 @@ dependencies {
     compile 'com.parse.bolts:bolts-android:1.+'
     compile fileTree(dir: 'libs', include: 'Parse-*.jar')
     compile project(':ParseLoginUI')
+    compile 'com.jakewharton:butterknife:6.0.0'
+    compile 'com.squareup:otto:1.3.5'
 }

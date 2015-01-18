@@ -30,7 +30,7 @@ import android.widget.Toast;
 import com.parse.Parse;
 
 /**
- * Base class with helper methods for fragments in ParseLoginUI.
+ * Base pojos with helper methods for fragments in ParseLoginUI.
  */
 public class ParseLoginFragmentBase extends Fragment {
   protected ParseOnLoadingListener onLoadingListener;
